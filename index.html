@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebRTC Chat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://skyway.io/dist/0.3/peer.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <legend><h1>WebRTC Chat</h1></legend>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="PeerID" id="peer-id-input" onkeydown="connect();">
+                <span class="input-group-btn">
+                    <button class="btn btn-success" type="button" id="connect">Connect</button>
+                </span>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="close">Close</button>
+                </span>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 ellipsis">
+                    MyID :
+                </div>
+                <div class="col-xs-8 ellipsis">
+                    <span id="my-id">---</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    PeerID :
+                </div>
+                <div class="col-xs-8">
+                    <span id="peer-id">---</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+            <div id="chat_title">
+                <div class="row">
+                    <div class="col-xs-4">
+                        Speaker ID
+                    </div>
+                    <div class="col-xs-8">
+                        Message
+                    </div>
+                </div>
+            </div>
+            <div id="chat_form">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <p id="MySpeakerID" class="ellipsis"></p>
+                    </div>
+                    <div class="col-xs-7 input-group">
+                        <input type="text" class="form-control" placeholder="Chat Message" id="message" onkeydown="send();">
+                        <span class="input-group-btn">
+                            <button id="send" class="btn btn-info" type="button">Send</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="messages">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

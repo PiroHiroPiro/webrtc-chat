@@ -1,0 +1,45 @@
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+.three-line-ellipsis {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+#chat_title {
+    border-bottom: 1px #000 solid;
+    padding: 10px 0px 3px 0px;
+}
+
+#chat_form {
+    padding: 8px 0px;
+}
+
+#MySpeakerID {
+    padding: 7px 0px;
+    margin: 0px;
+}
+
+#chat_history {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment {
+    padding: 3px 0px;
+}
+
+.color_blue {
+    color: #8cd9d5;
+}
+
+.color_green {
+    color: #91da94;
+}
